@@ -59,3 +59,45 @@
     object-fit: cover;
     z-index: 0; 
   }
+  .swap.swap-rotate {
+    position: absolute;
+    top: 20px;  /* Distancia desde la parte superior */
+    right: 20px;  /* Distancia desde la parte derecha */
+    z-index: 1000;  /* Asegura que esté sobre otros elementos */
+    cursor: pointer;
+  }
+  
+  /* Animación para el ícono */
+  .swap svg {
+    transition: transform 0.3s ease;
+  }
+  
+  /* Rotación del icono al cambiar de estado */
+  input[type="checkbox"]:checked + svg.swap-on {
+    transform: rotate(360deg);
+  }
+  input[type="checkbox"]:not(:checked) + svg.swap-off {
+    transform: rotate(360deg);
+  }
+  .grid {
+    max-width: 80%; /* Ajusta el tamaño de la galería */
+    margin: 20px auto; /* Centra la galería y añade margen arriba y abajo */
+}
+
+.grid > div {
+    padding: 10px; /* Añade un poco de espacio alrededor de cada columna */
+}
+
+.grid img {
+    width: 100%; /* Asegura que las imágenes no excedan el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    border-radius: 8px; /* Redondea las esquinas de las imágenes */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .grid {
+        max-width: 95%; /* Ajusta el tamaño de la galería para pantallas pequeñas */
+        margin: 10px auto; /* Menor margen para pantallas pequeñas */
+    }
+}
