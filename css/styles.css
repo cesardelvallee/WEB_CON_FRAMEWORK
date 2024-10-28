@@ -101,3 +101,40 @@
         margin: 10px auto; /* Menor margen para pantallas pequeñas */
     }
 }
+/* Contenedor del rectángulo negro */
+.carousel-container {
+  background-color: #000; /* Fondo negro */
+  color: #ffea01; /* Texto en blanco */
+  width: 100vw; /* Ancho completo de la pantalla */
+  overflow: hidden; /* Oculta el texto que sale del contenedor */
+  padding: 0; /* Espacio superior e inferior */
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Carrusel de texto */
+.carousel-text {
+  display: flex;
+  animation: slide-horizontal 9s linear infinite;
+  white-space: nowrap; /* Evita el salto de línea de los textos */
+}
+
+/* Estilo de cada texto individual */
+.carousel-text p {
+  font-size: 2.5rem;
+  font-family: monospace;
+  padding:  50px; /* Espacio entre cada texto */
+  margin: 0;
+}
+
+/* Animación de deslizamiento horizontal */
+@keyframes slide-horizontal {
+  0% { transform: translateX(100%); }
+  33% { transform: translateX(0); }
+  66% { transform: translateX(-100%); }
+  100% { transform: translateX(-200%); }
+}
