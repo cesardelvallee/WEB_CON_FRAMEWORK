@@ -172,7 +172,7 @@
 .lds-circle {
   display: inline-block;
   transform: translateZ(1px);
-  color: pink;
+  color: red;
 }
 .lds-circle > div {
   display: inline-block;
